@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+.align-vertical {
+	display: table-cell;
+	vertical-align: middle;
+	height: 50px;
+	border: 1px solid red;
+}
+
+.align-sub-vertical {
+	display: table-cell;
+	vertical-align: middle;
+	height: 25px;
+	border: 1px solid red;
+}
+
+table {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	margin: 0 auto;
+	align-self: center;
+}
+
+input {
+  height: 60px;
+  flex: 0 0 600px;
+  margin-left: 40px;
+}
