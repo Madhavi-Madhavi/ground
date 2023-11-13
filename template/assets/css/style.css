@@ -7497,7 +7497,10 @@ body {
   line-height: 1.5;
   color: #ffffff;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  background-image: url('../images/background.png')
+
+}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -20648,14 +20651,13 @@ div.tagsinput {
       font-size: 1.5rem;
       line-height: 48px;
       margin-right: 0;
-      padding: 0rem 0rem 0rem 1.3rem;
       width: 100%; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand:active, .sidebar .sidebar-brand-wrapper .sidebar-brand:focus, .sidebar .sidebar-brand-wrapper .sidebar-brand:hover {
         color: #252b3e; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand img {
-        width: calc(244px - 120px);
+        width: calc(244px - 5px);
         max-width: 100%;
-        height: 28px;
+        height: 80px;
         margin: auto;
         vertical-align: middle; }
       .sidebar .sidebar-brand-wrapper .sidebar-brand.brand-logo-mini {
@@ -21130,6 +21132,26 @@ div.tagsinput {
   padding: 1.875rem 1.75rem;
   width: 100%;
   -webkit-flex-grow: 1;
-  flex-grow: 1; }
+  flex-grow: 1;
+  background-image: url('../images/background.png');
+  object-fit: contain;
+
+}
 
 /*# sourceMappingURL=maps/style.css.map */
+
+.matchselection{
+  width : 200px;
+  height: 200px;
+}
+.datepicker{
+  width : 400px;
+  height: 400px;
+  margin: auto;
+}
+.flex_items > input{
+margin-left: calc(50vw-200px);
+display: inline-flex;
+gap: 20px
+
+}

@@ -15,10 +15,8 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="shortcut icon" href="../../assets/images/cricket_PNG9.png" />
-
     <!-- End layout styles -->
-    <script src="../../js/aboutus.js"></script>
+    <link rel="shortcut icon" href="../../assets/images/cricket_PNG9.png" />
   </head>
   <body>
     <div class="container-scroller">
@@ -30,7 +28,7 @@
         </div>
         <ul class="nav">
           <li class="nav-item profile">
-            
+           
           </li>
           <li class="nav-item nav-category">
             <span class="nav-link">Cricket Ground Booking System</span>
@@ -66,6 +64,15 @@
               <span class="menu-title">Ground details</span>
             </a>
           </li> -->
+
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="../../pages/forms/bookground.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Book your ground</span>
+            </a>
+          </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="../actions/matchselection.html">
               <span class="menu-icon">
@@ -82,7 +89,7 @@
               <span class="menu-title">Selection of Ground</span>
             </a>
           </li>
-         
+
           <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/charts/chartjs.html">
               <span class="menu-icon">
@@ -112,7 +119,7 @@
                 </form>
               </li>
             </ul>
-          
+        
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
               <span class="mdi mdi-format-line-spacing"></span>
             </button>
@@ -121,51 +128,57 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="col-md-9 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h3>About US</h3>
-                <div class="menu-title">We make use of innovative measures to back our approach to streamline the online ground booking process and
-                  make
-                  it simpler and easier for our customers. Our easy yet intuitive online ground booking mechanism, which is
-                  crafted
-                  especially for the convenience of people, makes
-                  online ground booking much simpler and faster than its counterpart- offline booking. At CGBS, we have a
-                  wide
-                  range of exclusive grounds. At CGBS, we have a wide range of venue categories.
-                   People can now book the best venues in their city with just a few clicks through
-                   CGBS.
-                  We look forward to raising the bar for online ground booking across cities by providing necessary features to our customers like prompt customer services, faster bookings,
-                  and
-                  online payments. We are very keen on providing our customers with the best venues for their events. When it
-                  comes to quality and service of the CGBS or vendors, we never compromise on it. Moreover, we offer
-                  accurate
-                  and updated descriptions and transparent pricing for all our bookings so that our customers get a clarity of
-                  the
-                  ground they are booking.<br>
-                  <br/>
-                  <h4>For more details reach us </h4>                            
-                  <label class="badge badge-success">
-                    <a class="cta-btn" id="match-selection" 
-                    >+1 470887867</a>
+            <div class="page-header">
+              <h3 class="page-title"> Dropdowns </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dropdowns</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+                     
+         
+             
+              <div class="col-lg-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Select the ground details from the below list.</h4>
+                    <!-- <p class="card-description"> Add class <code>.btn-{size}</code> to dropdown buttons </p> -->
+                    <div class="template-demo">
+                      <div class="dropdown btn">
+                        <!-- <button class="btn btn-danger btn-lg dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button> -->
+                        <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton1"> -->
+                          <select class="cta-btn1" id="groundSelect">
+                              <option value="" aria-placeholder="Select country">Select</option>
+                              <option value="Babukhan Arena (Kokapet)">Babukhan Arena (Kokapet)</option>
+                              <option value="ElitesMRR cricket ground(Aziz Nagar)">ElitesMRR cricket ground(Aziz Nagar)</option>
+                              <option value="K.B.R. cricket ground(Yenikepally)">K.B.R. cricket ground(Yenikepally)</option>
+                              <option value="MBR Grounds(Yenikepally)">MBR Grounds(Yenikepally)</option>
+                              <option value="Melgiri Cricket Ground(Yenikepally)">Melgiri Cricket Ground(Yenikepally)</option>
+                              <option value="MLR Grounds(Suraram)">MLR Grounds(Suraram)</option>
+                              <option value="MRE Grounds(Aziz Nagar)">MRE Grounds(Aziz Nagar)</option>
+
+                          </select>
+
+                         
+                        <!-- </div> -->
+                      </div>
+                      <label class="badge badge-success  mt-5">
+                        <a class="cta-btn" 
+                        href="../actions/preview.html"
+                        id='groundButton'
+                        >Next (User details)</a>
   
-                  </label>
-                  <label class="badge badge-success">
-                    <a class="cta-btn" id="match-selection" 
-                    >+1 91364674748</a>
-  
-                  </label>
-                  <label class="badge badge-success">
-                    <a class="cta-btn" id="match-selection" 
-                    > +1 9139383943</a>
-  
-                  </label>
-                </div>
+                      </label>
+                    </div>
+                
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-      
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
@@ -192,6 +205,7 @@
     <script src="../../assets/js/misc.js"></script>
     <script src="../../assets/js/settings.js"></script>
     <script src="../../assets/js/todolist.js"></script>
+    <script src="../../js/ground.js"></script>
     <!-- endinject -->
   </body>
 </html>
