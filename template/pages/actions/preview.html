@@ -18,7 +18,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/cricket_PNG9.png" />
 
-    <script src="../../js/matchselection.js"></script>
+    <script src="../../js/preview.js"></script>
   </head>
   <body>
     <div class="container-scroller">
@@ -143,62 +143,47 @@
               <div class="col-lg-12 grid-margin">
                 <div class="card">
                     <section id="ground" class="cta">
-                        <from onsubmit="event.preventDefault();"></form>
     
                             <div >
-                                <h3>Preview : Check your preview as below</h3>
-    
-                                <section id="ground" class="cta">
+                                <h3>Preview : Check your preview as below</h3>    
                                     <div>
                                     <form onsubmit="event.preventDefault();" action=".php">
                                        <div class="flex_items">
                                         <strong>Choosen Date: </strong>                                         
-                                        <input type="text" value="abc" id="dateVal" class="cta-btn" name="dateVal" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="dateVal" class="cta-btn" name="dateVal" disabled /> <br /> <br /><br />
                                        </div>
-                                        <!-- <input type="hidden" value="abc" id="timeVal" class="cta-btn" name="timeVal" disabled /> <br /> <br /><br /> -->
-                                        <div class="flex_items">
+                                       <div class="flex_items">
                                         <strong>Choosen Ground: </strong> 
-                                        <input type="text" value="abc" id="groundVal" class="cta-btn" name="groundVal" style="width: 60%" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="groundVal" class="cta-btn" name="groundVal" disabled /> <br /> <br /><br />
                                         </div>
                                         <div class="flex_items">
                                         <strong>Entered Captain Name: </strong>&nbsp;&nbsp;
-                                        <input type="text" value="abc" id="captFirName" class="cta-btn" name="captFirName" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="captFirName" class="cta-btn" name="captFirName" disabled /> <br /> <br /><br />
                                         </div>
                                         <div class="flex_items">
                                         <strong>Entered Captain Email address: </strong>&nbsp;&nbsp;
-                                        <input type="text" value="abc" id="captlasName" class="cta-btn" name="captlasName" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="captlasName" class="cta-btn" name="captlasName" disabled /> <br /> <br /><br />
                                         </div>
                                         <div class="flex_items">
                                         <strong>Entered Phone no: </strong>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input type="text" value="abc" id="phone" class="cta-btn" name="phone" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="phone" class="cta-btn" name="phone" disabled /> <br /> <br /><br />
                                         </div>
                                         <div class="flex_items">
                                         <strong>Entered City: </strong>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input type="text" value="abc" id="city" class="cta-btn" name="city" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="city" class="cta-btn" name="city" disabled /> <br /> <br /><br />
                                         </div>
                                         <div class="flex_items">
                                         <strong>Comments: </strong>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input type="text" value="abc" id="comments" class="cta-btn" name="city" disabled /> <br /> <br /><br />
+                                        <input type="text"   id="comments" class="cta-btn" name="city" disabled /> <br /> <br /><br />
                                         </div>
                                         
                                     </form>
                 
                                     </div>
                                 </section>
-                                </section>
                               
-                            </div>
+                            </div>         
                             
-                              <!-- <div id="datepicker-section" style="visibility: hidden;" class="datepicker">
-                                <input class="form-control cta-btn1" type="date" id="onedayDatePicker"/>
-                                <h4 style="margin-top: 10px;">Note: Date range selection restricted to with in the month and past dates not allowed</h4>
-                                <label class="badge badge-success">
-                                    <a class="cta-btn" id="match-selection" 
-                                    href="../actions/groundselection.html"
-                                    >Next (Select Ground)</a>
-    
-                                  </label>
-                              </div> -->
                             
                               
                             
@@ -236,7 +221,6 @@
     <script src="../../assets/js/misc.js"></script>
     <script src="../../assets/js/settings.js"></script>
     <script src="../../assets/js/todolist.js"></script>
-    <script src="../../js/preview.js"></script>
     <!-- endinject -->
   </body>
 </html>
