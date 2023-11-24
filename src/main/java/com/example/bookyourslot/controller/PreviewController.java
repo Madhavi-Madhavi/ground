@@ -11,8 +11,9 @@ public class PreviewController {
 		return "pages/actions/preview.html";
 	}
 	@GetMapping("/getpreviewdetails")
-	public String hello() {
+	public String getPreviewDetails() {
 		return "getdetails";
 	}
+	
 	
 }
