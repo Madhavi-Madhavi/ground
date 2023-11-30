@@ -21146,7 +21146,7 @@ div.tagsinput {
 }
 .datepicker{
   width : 400px;
-  height: 400px;
+  /* height: 255px; */
   margin: auto;
 }
 .flex_items > input{

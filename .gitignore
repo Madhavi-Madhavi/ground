@@ -3,3 +3,17 @@ node_modules/
 package-lock.json
 .DS_Store
 .vscode
+*.target
+*.settings
+*.ttf
+.eot
+.download
+th*
+*.svg
+*.download
+ODF*
+OIP*
+target*/
+*log
+*br.css
+*classes*/

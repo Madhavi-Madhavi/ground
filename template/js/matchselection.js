@@ -1,8 +1,9 @@
 // functions for all the events
 function start() {
     console.log('hi1');
+    console.log('template');
     document.getElementById("one").addEventListener("click", datepicker, false);
-    document.getElementById("test").addEventListener("click", datepicker, false);
+    // document.getElementById("test").addEventListener("click", datepicker, false);
     document.getElementById("t20").addEventListener("click", datepicker, false);
     document.getElementById("match-selection").addEventListener("click", saveMatchSelectionDetails, false);
   
