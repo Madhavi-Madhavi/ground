@@ -141,7 +141,7 @@
               <div class="col-lg-12 grid-margin">
                 <div class="card">
                     <!-- <section id="ground" class="cta" name="matchtype"> -->
-                        <form action="saveSelectedMatchDetails" method="post">
+                        <form action="savealldetails" method="post">
     
                             <div class="text-center">
                                 <h3>Match selection</h3>
@@ -166,78 +166,55 @@
                               <div id="datepicker-section" style="visibility: hidden;" class="datepicker">
                                 <input class="form-control cta-btn1" type="date" id="onedayDatePicker" name="date"/>
                                 <h4 style="margin-top: 10px;">Note: Date range selection restricted to with in the month and past dates not allowed</h4>
-                              
+<!--                               
                                 <a class="nav-link" id="gettimeslot"data-toggle="collapse" href="#timeslot-section" aria-expanded="false" aria-controls="ui-basic">
                                   Click here to get timeslot
-                                </a>
+                                </a> -->
                                 <!-- <button  id="gettimeslot" type="cancel" class="btn btn-primary btn-block enter-btn">Get time slots</button> -->
                                
                               </div>                             
-                              <div class="timeslot text-center datepicker" id="timeslot-section">
-                                <div class="form-group">
-                                  <h3>Morning slots: </h3>
-                                  <select class="js-example-basic-single" id="morningslot"
-                                  style="width: 100%">
-                                  <option>select morning slot</option>
-                                  <option value="8am">8 am </option>
-                                  <option value="11am">11 am </option>
-                                
-                                </select>
+                              <div class="timeslot text-center datepicker" id="timeslot-section" style="visibility: hidden;">
+                                <div class="text-center">                                  
+                                <label for="one">                                 
+                                  <input type="radio" name="radioGroup" value="morning" id="morning" >
+                                  Morning slot 
+                                 </label>                           
+                              &nbsp;&nbsp;&nbsp;&nbsp;
+                              <label for="one">                                 
+                                <input type="radio" name="radioGroup" value="afternoon" id="afternoon" >
+                                Afternoon slot
+                               </label>                           
+                            &nbsp;&nbsp;&nbsp;&nbsp;                                
                                 </div>
-                                <div class="form-group">
-                                  <h3>Evening slots: </h3>
-                                  <select class="js-example-basic-single" id="eveningslot"
-                                  style="width: 100%">
-                                  <option>select evening slot</option>
-                                  <option value="1pm">1 pm</option>
-                                  <option value="3pm">3 pm</option>
-                                 
-                                </select>
-                                </div>
-                                <a class="nav-link" id="gettimeslot"data-toggle="collapse" href="#timeslot-section" aria-expanded="false" aria-controls="ui-basic">
-                                  Click here to select the ground
-                                </a>
+                              
+                              
                               </div>  
-                              <div class="timeslot text-center datepicker" id="timeslot-section">
+                              <div class="timeslot text-center datepicker">
                                 <div class="form-group">
                                   <div class="col-lg-12 grid-margin">
-                                    <div class="card">
+                                    <div class="card"  style="visibility: hidden;" id="ground-section">
                                       <div class="card-body">
                                         <h4 class="card-title">Select the ground details from the below list.</h4>
                                        
                                         <div class="template-demo">
                                           <div class="dropdown btn">
-                                              <form class="forms-sample"  method="post" action="saveSelectedGroundDetails" th:object="${grounds}">
+                                              <div class="forms-sample" th:object="${grounds}">
                                               <select class="cta-btn1" id="groundSelect" name="groundname">
-                                                  <!-- <option value="" aria-placeholder="Select country">Select</option>
-                                                  <option value="Babukhan Arena (Kokapet)">Babukhan Arena (Kokapet)</option>
-                                                  <option value="ElitesMRR cricket ground(Aziz Nagar)">ElitesMRR cricket ground(Aziz Nagar)</option>
-                                                  <option value="K.B.R. cricket ground(Yenikepally)">K.B.R. cricket ground(Yenikepally)</option>
-                                                  <option value="MBR Grounds(Yenikepally)">MBR Grounds(Yenikepally)</option>
-                                                  <option value="Melgiri Cricket Ground(Yenikepally)">Melgiri Cricket Ground(Yenikepally)</option>
-                                                  <option value="MLR Grounds(Suraram)">MLR Grounds(Suraram)</option>
-                                                  <option value="MRE Grounds(Aziz Nagar)">MRE Grounds(Aziz Nagar)</option> -->
+                                                  <option>Select the ground from below list</option>
                                                   <option th:each="ground: ${grounds}" th:value="${ground.groundname}" th:text="${ground.groundname + ' - ' + ground.place}"></option> 
                     
                                               </select>
-                                             </form>
+                                            
                     
                                           </div>
-                                          <label class="badge badge-success  mt-5">
-                                            <a class="cta-btn" 
-                                            id='groundButton'
-                                            href="#details"
-                                            >Click here to provide the details !</a>
-                      
-                                          </label>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="card" id="details">
+                                    <div class="card" id="details"  style="visibility: hidden;">
                                       <div class="card-body">
                                   <h3 class="page-title"> Book the ground by filling the below form </h3>
                     
-                                        <form class="forms-sample" action="savealldetails" method="post">
+                                        <div class="forms-sample">
                                           <div class="form-group">
                                             <label for="name">Name</label>
                                             <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -246,10 +223,7 @@
                                             <label for="email">Email address</label>
                                             <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                                           </div>
-                                          <!-- <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                                          </div> -->
+                                       
                                           <div class="form-group">
                                             <label for="gender">Gender</label>
                                             <select class="form-control" id="gender" name="gender">
@@ -280,9 +254,9 @@
                                             <label for="comments">Enter any comments</label>
                                             <textarea class="form-control" id="comments" rows="4" name="comments"></textarea>
                                           </div>
-                                          <button type="submit" id="submitalldetails" class="btn btn-primary btn-block enter-btn">
+                                          <!-- <button type="submit" id="submitalldetails" class="btn btn-primary btn-block enter-btn">
                                            Submit
-                                          </button>
+                                          </button> -->
                                           <!-- <label class="badge badge-success">
                                             <a class="cta-btn" id="match-selection" 
                                             href="/matchselection"
@@ -290,12 +264,15 @@
                     
                                           </label>
                                           <button class="btn btn-dark">Cancel</button> -->
-                                        </form>
+                                    
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+                              <button type="submit" id="submitalldetails" class="btn btn-primary btn-block enter-btn">
+                                Submit
+                               </button>
 
                               <!-- <button type="submit" class="btn btn-primary btn-block enter-btn">Submit</button> -->
                         </form>

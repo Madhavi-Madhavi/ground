@@ -17,12 +17,12 @@ public class PreviewDetails {
 
 	@Column(name = "matchtype")
 	private String matchtype;
-	
+
 	@Column(name = "date")
 	private String date;
 
-	@Column(name = "timeslot")
-	private String timeslot;
+	@Column(name = "time")
+	private String time;
 
 	@Column(name = "groundname")
 	private String groundname;
@@ -69,12 +69,12 @@ public class PreviewDetails {
 		this.date = date;
 	}
 
-	public String getTimeslot() {
-		return timeslot;
+	public String getTime() {
+		return time;
 	}
 
-	public void setTimeslot(String timeslot) {
-		this.timeslot = timeslot;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public String getGroundname() {
@@ -135,16 +135,11 @@ public class PreviewDetails {
 
 	@Override
 	public String toString() {
-		return "PreviewDetails [sn=" + sn + ", matchtype=" + matchtype + ", date=" + date + ", timeslot=" + timeslot
+		return "PreviewDetails [sn=" + sn + ", matchtype=" + matchtype + ", date=" + date + ", time=" + time
 				+ ", groundname=" + groundname + ", name=" + name + ", email=" + email + ", gender=" + gender
-				+ ", phone=" + phone + ", city=" + city + ", comments=" + comments + ", getSn()=" + getSn()
-				+ ", getMatchtype()=" + getMatchtype() + ", getDate()=" + getDate() + ", getTimeslot()=" + getTimeslot()
-				+ ", getGroundname()=" + getGroundname() + ", getName()=" + getName() + ", getEmail()=" + getEmail()
-				+ ", getGender()=" + getGender() + ", getPhone()=" + getPhone() + ", getCity()=" + getCity()
-				+ ", getComments()=" + getComments() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+				+ ", phone=" + phone + ", city=" + city + ", comments=" + comments + "]";
 	}
-
+	
 	
 
 }

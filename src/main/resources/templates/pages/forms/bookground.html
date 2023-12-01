@@ -151,21 +151,13 @@
                       <table class="table">
                         <thead>
                           <tr>
-                            <!-- <th>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </th> -->
-                            <th> Client Name </th>
+                           <th> Client Name </th>
                             <th> Order No </th>
                             <th> Match Type </th>
                             <th> Date </th>
                             <th> Time slot </th>
                             <th> Ground name </th>
                             <th>Email</th>
-                            <!-- <th>Gender</th> -->
                             <th>Phone</th>
                             <th>City</th>
                             <th>Comments</th>
@@ -180,10 +172,9 @@
                             <td th:if="${preview.name != null}" th:text="${preview.sn}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.matchtype}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.date}"></td>
-                            <td th:if="${preview.name != null}" th:text="${preview.timeslot}"></td>
+                            <td th:if="${preview.name != null}" th:text="${preview.time}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.groundname}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.email}"></td>
-                            <!-- <td th:text="${preview.gender}"></td> -->
                             <td th:if="${preview.name != null}" th:text="${preview.phone}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.city}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.comments}"></td>

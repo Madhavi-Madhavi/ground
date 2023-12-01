@@ -7,6 +7,32 @@ function start() {
   document
     .getElementById("submitalldetails")
     .addEventListener("click", saveMatchSelectionDetails, false);
+  document
+    .getElementById("onedayDatePicker")
+    .addEventListener("change", getTimeSlots, false);
+  document
+    .getElementById("morning")
+    .addEventListener("click", slotSelection, false);
+  document
+    .getElementById("afternoon")
+    .addEventListener("click", slotSelection, false);
+  document
+    .getElementById("groundSelect")
+    .addEventListener("change", getDetailsSection, false);
+}
+
+function getDetailsSection() {
+  document.getElementById("details").style.visibility = "visible";
+}
+function slotSelection() {
+  document.getElementById("ground-section").style.visibility = "visible";
+}
+function getTimeSlots() {
+  if (document.getElementById("t20").checked) {
+    document.getElementById("timeslot-section").style.visibility = "visible";
+  } else if (document.getElementById("one").checked) {
+    document.getElementById("ground-section").style.visibility = "visible";
+  }
 }
 
 window.addEventListener("load", () => {
@@ -18,8 +44,16 @@ function datepicker() {
     // enableDisableWeekdays(datePickerInput,true);
     // enableDisableWeekdays(datePickerInput, false, [0, 6]);
     console.log("one checked");
+    document.getElementById("timeslot-section").style.visibility = "hidden";
+    document.getElementById("ground-section").style.visibility = "hidden";
+    document.getElementById("details").style.visibility = "hidden";
+
   } else if (document.getElementById("t20").checked) {
     document.getElementById("datepicker-section").style.visibility = "visible";
+    document.getElementById("timeslot-section").style.visibility = "hidden";
+    document.getElementById("ground-section").style.visibility = "hidden";
+    document.getElementById("details").style.visibility = "hidden";
+
     console.log("t20 checked");
   } else if (document.getElementById("gettimeslot").checked) {
     console.log("coming here");
@@ -74,8 +108,9 @@ function saveMatchSelectionDetails() {
   var matchtype = document.getElementById("one").value;
   var matchtype_1 = document.getElementById("t20").value;
   var date = document.getElementById("onedayDatePicker").value;
-  var timeslot = document.getElementById("morningslot").value;
-  var timeslot_eve = document.getElementById("eveningslot").value;
+  // var timeslot = document.getElementById("morning").value;
+  // var timeslot_eve = document.getElementById("afternoon").value;
+  var timeslot = document.querySelector('input[name="radioGroup"]:checked').value;
   var groundname = document.getElementById("groundSelect").value;
 
   var name = document.getElementById("name").value;
@@ -85,9 +120,11 @@ function saveMatchSelectionDetails() {
   var city = document.getElementById("city").value;
   var comments = document.getElementById("comments").value;
 
-  localStorage.setItem("time", timeslot || timeslot_eve);
+  localStorage.setItem("matchtype", matchtype || matchtype_1);
   localStorage.setItem("date", date);
-  localStorage.setItem("ground", groundname);
+  localStorage.setItem("timeslot", timeslot);
+  localStorage.setItem("groundname", groundname);
+
   localStorage.setItem(
     "details",
     JSON.stringify({
@@ -99,6 +136,7 @@ function saveMatchSelectionDetails() {
       comments,
     })
   );
+  console.log(localStorage.getItem('details','details'))
   const inputValue = {
     date,
     groundname,
@@ -108,12 +146,12 @@ function saveMatchSelectionDetails() {
     phone,
     comments,
     city,
-    timeslot: timeslot || timeslot_eve,
+    time: timeslot,
     matchtype: matchtype || matchtype_1,
   };
 
-  console.log(inputValue,'inputValue');
-  console.log(  {body: JSON.stringify({ data: inputValue })},'body')
+  console.log(inputValue, "inputValue");
+  console.log({ body: JSON.stringify({ data: inputValue }) }, "body");
   fetch("/savealldetails", {
     method: "POST",
     headers: {

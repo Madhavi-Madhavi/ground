@@ -32,7 +32,7 @@ public class PreviewController {
 	public String userRegistration(@ModelAttribute PreviewDetails preview, Model model) {
 		model.addAttribute("matchtype", preview.getMatchtype());
 		model.addAttribute("date", preview.getDate());
-		model.addAttribute("timeslot", preview.getTimeslot());
+		model.addAttribute("timeslot", preview.getTime());
 		model.addAttribute("groundname", preview.getGroundname());
 
 		model.addAttribute("name", preview.getName());
