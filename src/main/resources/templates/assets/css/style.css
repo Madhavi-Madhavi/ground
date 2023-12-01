@@ -16613,18 +16613,18 @@ code {
       top: 0;
       right: 0;
       height: 100%; }
-  .card.corona-gradient-card {
+  .card.Cricket Ground Booking System-gradient-card {
     background-image: linear-gradient(to left, #d41459, #911a6c);
     border-radius: 6px; }
-    .card.corona-gradient-card .gradient-corona-img {
+    .card.Cricket Ground Booking System-gradient-card .gradient-Cricket Ground Booking System-img {
       height: 85px; }
       @media (max-width: 576px) {
-        .card.corona-gradient-card .gradient-corona-img {
+        .card.Cricket Ground Booking System-gradient-card .gradient-Cricket Ground Booking System-img {
           height: auto;
           min-height: 50px;
           max-height: 85px; } }
     @media (max-width: 576px) {
-      .card.corona-gradient-card h4 {
+      .card.Cricket Ground Booking System-gradient-card h4 {
         font-size: 0.75rem; } }
 
 .card-inverse-primary {

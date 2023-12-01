@@ -43,7 +43,7 @@ public class PreviewController {
 		model.addAttribute("gender", preview.getGender());
 
 		PreviewDetails previewDetails = previewRepo.save(preview);
-//		model.addAttribute("Message", ground_inserted.getEmail() + "Ground booked successfully");
+		model.addAttribute("Message", "Ground booked successfully");
 		return "pages/actions/matchselection.html";
 
 	}
