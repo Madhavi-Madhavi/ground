@@ -152,7 +152,7 @@
                         <thead>
                           <tr>
                            <th> Client Name </th>
-                            <th> Order No </th>
+                         
                             <th> Match Type </th>
                             <th> Date </th>
                             <th> Time slot </th>
@@ -161,7 +161,7 @@
                             <th>Phone</th>
                             <th>City</th>
                             <th>Comments</th>
-                            <th> Payment Status </th>
+                            <th> Booking Status </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -169,7 +169,6 @@
                             <td th:text="${preview.name}">
                               <img src="assets/images/faces/face1.jpg" alt="image" />
                             </td>
-                            <td th:if="${preview.name != null}" th:text="${preview.sn}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.matchtype}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.date}"></td>
                             <td th:if="${preview.name != null}" th:text="${preview.time}"></td>
